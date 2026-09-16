@@ -1,0 +1,65 @@
+{
+  "format": "solar-sim/export",
+  "version": 1,
+  "exported_at": "2026-09-07T15:00:00Z",
+  "correlation_id": "exp_9f2c41ab7d",
+  "scenario": {
+    "id": "scn-001",
+    "name": "dia-limpo-telhado-2aguas",
+    "idempotency_key": "scn-001/dia-limpo-telhado-2aguas",
+    "graph_snapshot_hash": "sha256:9f2c...a1",
+    "catalog_refs": [
+      { "item": "fixture:roof-gable-01", "hash": "sha256:3b...",
+        "status": "validated" },
+      { "item": "fixture:pv-mod-550g", "hash": "sha256:77..." },
+      { "item": "fixture:mppt-node-01", "hash": "sha256:e2..." },
+      { "item": "fixture:irr-clear-day-01", "hash": "sha256:1a..." }
+    ]
+  },
+  "building": {
+    "id": "bld-001",
+    "name": "edificacao generica",
+    "external_refs": [],
+    "roof_ids": ["roof-001"]
+  },
+  "roofs": [
+    {
+      "id": "roof-001",
+      "template_id": "roof-gable-01",
+      "orientation_deg": 0,
+      "tilt_deg": 25,
+      "polygon_m": [[0,0],[8,0],[8,5],[4,7],[0,5]],
+      "external_refs": []
+    }
+  ],
+  "mppts": [
+    {
+      "id": "mppt-001",
+      "preset_id": "mppt-node-01",
+      "name": "MPPT 01",
+      "external_refs": []
+    }
+  ],
+  "modules": [
+    {
+      "id": "mod-001",
+      "catalog_id": "pv-mod-550g",
+      "roof_id": "roof-001",
+      "position_m": [1.2, 0, 1.0],
+      "rotation_deg": [0, 0, 0],
+      "mppt_id": "mppt-001",
+      "external_refs": []
+    }
+  ],
+  "results": {
+    "kind": "derived",
+    "note": "Regeneravel; nunca tratado como fato de engenharia.",
+    "last_run": {
+      "at": "2026-09-07T14:00:00Z",
+      "sun_azimuth_deg": 213,
+      "sun_elevation_deg": 42,
+      "shading": [{ "module_id": "mod-001", "factor": 0.94 }],
+      "kwh_total": 1.42
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.env
+.env.*
+!.env.example
+
+# Secrets e runtime local
+*.secret
+*.secrets
+
+# Node / Vite
+node_modules/
+dist/
+dist-ssr/
+*.local
+vite.config.*.timestamp*
+
+# Logs e caches
+*.log
+npm-debug.log*
+.cache/
+coverage/
+
+# OS / editores
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
